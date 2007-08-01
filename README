@@ -1,0 +1,65 @@
+pdf417_encode
+------------------------------------------
+pdf417_encode is a program that converts ascii text to the pdf417 
+barcode standard. It supports text compression, numeric compression and 
+byte compression. It currently produces postscript and pbm output for 
+the barcode.
+
+Runtime requirements:
+  cygwin-1.5.24-2
+  libgif4-4.1.4-2
+  libnetpbm10-10.39.00-1
+
+Build requirements:
+  cygwin-1.5.24-2
+  binutils-20060817-1
+  cygport-0.3.5-1
+  gcc-core-3.4.4-3
+  make-3.81-1
+
+Canonical website:
+  http://webpages.charter.net/jtlien/pdf.html
+
+Canonical download:
+  http://downloads.sourceforge.net/pdf417encode/
+
+-------------------------------------------
+
+Build instructions:
+  unpack pdf417_encode-4.4-X-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  cygport ./pdf417_encode-4.4-X.cygport all
+
+This will create:
+  /usr/src/pdf417_encode-4.4-X-src.tar.bz2
+  /usr/src/pdf417_encode-4.4-X.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/cygpdf417enc.dll
+  /usr/bin/pdf417_dec.exe
+  /usr/bin/pdf417_enc.exe
+  /usr/bin/pdf417prep.exe
+  /usr/include/pdf417.h
+  /usr/include/pdf417_enc.h
+  /usr/lib/libpdf417enc.a
+  /usr/lib/libpdf417enc.dll.a
+  /usr/share/doc/Cygwin/pdf417_encode-4.4.README
+  /usr/share/doc/pdf417_encode-4.4/Changes
+  /usr/share/doc/pdf417_encode-4.4/LICENCSE
+  /usr/share/doc/pdf417_encode-4.4/README
+
+------------------
+
+Port Notes:
+
+----- version 4.4-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/

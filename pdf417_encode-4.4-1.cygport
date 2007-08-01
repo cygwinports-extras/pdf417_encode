@@ -1,0 +1,27 @@
+DESCRIPTION="PDF417 barcode generator"
+HOMEPAGE="http://webpages.charter.net/jtlien/pdf.html"
+SRC_URI="mirror://sourceforge/pdf417encode/pdf417_enc.${PV}.tar.gz"
+SRC_DIR="pdf417_enc.${PV}"
+
+DIFF_EXCLUDES="*.ps"
+
+MAKEOPTS+=" -j1"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake clean lib all
+	cygmake -C frontend_src clean frontend
+	cygmake -C pdf417_prep clean all
+}
+
+src_install() {
+	cd ${B}
+	dobin pdf417_enc.exe cygpdf417enc.dll */*.exe
+	dolib libpdf417enc*.a
+
+	insinto /usr/include
+	doins pdf417.h pdf417_enc.h
+
+	dodoc LICENCSE
+}
