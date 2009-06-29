@@ -1,5 +1,5 @@
 category: Graphics
-requires: cygwin libgif4 libnetpbm10
+requires: libgif4 libnetpbm10
 sdesc: "PDF417 barcode generator"
 ldesc: "pdf417_encode is a program that converts ascii text to the 
 pdf417 barcode standard. It supports text compression, numeric 
